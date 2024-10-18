@@ -31,6 +31,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.projet_mobile.ui.theme.ProjetMobileTheme
+import androidx.compose.material.icons.filled.Email
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.ui.res.stringResource
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -75,17 +78,16 @@ fun ShoppingCard() {
             Spacer(modifier = Modifier.height(15.dp))
 
             Text(
-                text = "SILUE WALAGNONNE TIEMOKO",
+                text = stringResource(R.string.TI),
                 fontSize = 22.sp, fontWeight = FontWeight.W500,
                 color = Color.DarkGray
             )
-            // TITLE
+            // TITRE
             Text (
-                text = "PROFESSIONAL CARD",
+                text = stringResource(R.string.CP),
                         fontSize = 16.sp,
                 fontWeight = FontWeight.W700
-               //  color = color.Gray,
-                // GRIS
+
             )
         }
         Spacer(modifier = Modifier.height(50.dp))
@@ -104,10 +106,10 @@ fun ShoppingCard() {
                     imageVector = Icons.Default.Phone,
                     contentDescription = "tel",
                     modifier = Modifier.size(24.dp),
-                    // tint = color.Black
+
                 )
                 Spacer(modifier = Modifier.width(12.dp))
-                Text(text = "(+255) 05 54 15 47 46",
+                Text(text = stringResource(R.string.num),
                     fontSize = 20.sp,
                     fontWeight = FontWeight.W500
                 )
@@ -117,16 +119,17 @@ fun ShoppingCard() {
             Row (
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.padding(4.dp)
+
             )
+
             {
-               /*  val imge2 = painterResource()
-                Image(
-                    painter = imge2,
-                    contentDescription = "",
-                    modifier = Modifier.size(24.dp)
-                ) */
+                Icon(
+                    imageVector = Icons.Default.Person,
+                    contentDescription = "Nom",
+                    modifier = Modifier.size(24.dp),
+                )
                 Spacer(modifier = Modifier.width(12.dp))
-                Text( text = "TIEMOKO SILUE", fontSize = 20.sp, fontWeight = FontWeight.W500)
+                Text( text = stringResource(R.string.nom), fontSize = 20.sp, fontWeight = FontWeight.W500)
             }
 
             Spacer(modifier = Modifier.height(15.dp))
@@ -135,15 +138,14 @@ fun ShoppingCard() {
                 verticalAlignment = Alignment.CenterVertically,
                 modifier = Modifier.padding(4.dp)
             ){
-               /* val mail = painterResource()
-                Image(
-                    painter = mail,
-                    contentDescription = "Mail",
-                    modifier = Modifier.size(24.dp)
-                ) */
+                Icon(
+                    imageVector = Icons.Default.Email,
+                    contentDescription = "Email",
+                    modifier = Modifier.size(24.dp),
+                )
 
                 Spacer(modifier = Modifier.width(12.dp))
-                Text(text = "tiemokosilue3@gmail.com", fontSize = 20.sp, fontWeight = FontWeight.W500)
+                Text(text = stringResource(R.string.email), fontSize = 20.sp, fontWeight = FontWeight.W500)
             }
         }
     }
@@ -151,9 +153,9 @@ fun ShoppingCard() {
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
-fun CardPreview() {
+fun MyAppPreview() {
     ProjetMobileTheme {
-        // Display app:
+
         ShoppingCard()
 
     }

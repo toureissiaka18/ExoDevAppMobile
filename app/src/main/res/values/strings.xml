@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Projet-Mobile</string>
+    <string name="email">toureissiaka182@gmail.com</string>
+    <string name="nom">TOURE ISSIAKA</string>
+    <string name="num">(+255) 05 66 88 92 44</string>
+    <string name="CP">CARTE DE PROFESSIONNELLE</string>
+    <string name="TI">TOURE ISSIAKA</string>
 </resources>
